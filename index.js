@@ -16,6 +16,8 @@ app.get("/:id", (req, res, next) => {
   return res.json({ id: req.params.id });
 });
 
+// this is a dummy commit
+
 if (process.env.ENVIRONMENT === "lambda") {
   module.exports.handler = serverless(app);
 } else {
