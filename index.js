@@ -2,7 +2,7 @@ const express = require("express");
 const serverless = require("serverless-http");
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.get("/test", (req, res, next) => {
   return res.send("works");
